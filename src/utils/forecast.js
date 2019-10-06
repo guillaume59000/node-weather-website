@@ -10,7 +10,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Impossible de trouver la meteo de cette localisation.', undefined)
         } else {
             console.log(JSON.stringify(body))
-            callback(undefined, body.daily.data[0].summary + ' La température actuelle est de ' + body.currently.temperature + ' degrés. La temperature minimale prévue ce jour sera de ' + body.daily.data[0].temperatureMin + ' degrés et la temperature maximale ' + body.daily.data[0].temperatureMax + 'degrés. Il y a ' + body.currently.precipProbability + '% de chance de pluie.')
+            callback(undefined, body.daily.data[0].summary + ' La température actuelle est de ' + body.currently.temperature + ' degrés. La temperature minimale prévue ce jour sera de ' + body.daily.data[0].temperatureMin + ' degrés et la temperature maximale ' + body.daily.data[0].temperatureMax + ' degrés. Il y a ' + body.currently.precipProbability + '% de chance de pluie.')
         }
     })
 }
